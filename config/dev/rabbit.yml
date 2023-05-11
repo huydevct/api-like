@@ -1,0 +1,404 @@
+stream_service_create_service_log:
+  name: "stream_service_create_service_log"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autolike.Stream.Service"
+    queue: "Autolike.Stream.Service.Create.Servicelog"
+    routing_key: ""
+    prefetch: 1
+cancel_service_remove_active_service:
+  name: "cancel_service_remove_active_service"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autolike.RemoveCancelService"
+    queue: "Autolike.RemoveCancelService.RemoveActiveService"
+    routing_key: ""
+    prefetch: 1
+cancel_service_update_waiting_active_service:
+  name: "cancel_service_update_waiting_active_service"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autolike.CancelService"
+    queue: "Autolike.CancelService.UpdateWaitingActiveService"
+    routing_key: ""
+    prefetch: 1
+publish_remove_cancel_service:
+  name: "publish_remove_cancel_service"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autolike.RemoveCancelService"
+success_service_remove_active_service:
+  name: "success_service_remove_active_service"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autolike.SuccessService"
+    queue: "Autolike.SuccessService.RemoveActiveService"
+    routing_key: ""
+    prefetch: 1
+cancel_service_remove_servicelog:
+  name: "cancel_service_remove_servicelog"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autolike.RemoveCancelService"
+    queue: "Autolike.RemoveCancelService.RemoveServicelog"
+    routing_key: ""
+    prefetch: 1
+success_service_remove_servicelog:
+  name: "success_service_remove_servicelog"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autolike.SuccessService"
+    queue: "Autolike.SuccessService.RemoveServicelog"
+    routing_key: ""
+    prefetch: 1
+resume_service_active_service:
+  name: "resume_service_active_service"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autolike.ResumeService"
+    queue: "Autolike.ResumeService.ActiveService"
+    routing_key: ""
+    prefetch: 1
+stream_service_create_active_service:
+  name: "stream_service_create_active_service"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autolike.Stream.Service"
+    queue: "Autolike.Stream.Service.Create.ActiveService"
+    routing_key: ""
+    prefetch: 1
+stream_active_clone_binding_servicelog:
+  name: "stream_active_clone_binding_servicelog"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.StreamActiveClone"
+    queue: "Autofarmer.StreamActiveClone.BindingServicelog"
+    routing_key: ""
+    prefetch: 100
+stream_service_create_service_bk:
+  name: "stream_service_create_service_bk"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autolike.Stream.Service"
+    queue: "Autolike.Stream.Service.Create.ServiceBK"
+    routing_key: ""
+    prefetch: 1
+do_result_update_clone_autofarmer_activities:
+  name: "do_result_update_clone_autofarmer_activities"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResult"
+    queue: "Autofarmer.DoResult.UpdateCloneAutofarmerActivities"
+    routing_key: ""
+    prefetch: 100
+do_result_update_service_log:
+  name: "do_result_update_service_log"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResult"
+    queue: "Autofarmer.DoResult.UpdateServiceLog"
+    routing_key: ""
+    prefetch: 100
+do_result_update_report_service:
+  name: "do_result_update_report_service"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResult"
+    queue: "Autofarmer.DoResult.UpdateReportService"
+    routing_key: ""
+    prefetch: 100
+do_result_update_number_report_service:
+  name: "do_result_update_number_report_service"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResult"
+    queue: "Autofarmer.DoResult.UpdateNumberReportService"
+    routing_key: ""
+    prefetch: 100
+publish_do_result:
+  name: "publish_do_result"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResult"
+publish_get_do_action:
+  name: "publish_get_do_action"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.GetDoAction"
+publish_do_result_likesub:
+  name: "publish_do_result_likesub"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResultLikesub"
+publish_do_result_autofarmer:
+  name: "publish_do_result_autofarmer"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResultAutofarmer"
+publish_autolike_success_service:
+  name: "publish_autolike_success_service"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autolike.SuccessService"
+do_result_update_active_clones:
+  name: "do_result_update_active_clones"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResult"
+    queue: "Autofarmer.DoResult.UpdateActiveClones"
+    routing_key: ""
+    prefetch: 100
+do_result_update_device_last_action_at:
+  name: "do_result_update_device_last_action_at"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResult"
+    queue: "Autofarmer.DoResult.UpdateDeviceLastActionAt"
+    routing_key: ""
+    prefetch: 100
+upsert_device_update_dropbox_name:
+  name: "upsert_device_update_dropbox_name"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.UpsertDevice"
+    queue: "Autofarmer.UpsertDevice.UpdateDropboxName"
+    routing_key: ""
+    prefetch: 1 # Set 1 để chạy đơn luồng, không set lên cao
+do_result_likesub_update_number_success:
+  name: "do_result_likesub_update_number_success"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResultLikesub"
+    queue: "Autofarmer.DoResultLikesub.UpdateNumberSuccess"
+    routing_key: ""
+    prefetch: 100
+do_result_likesub_update_clone_likesub_activities:
+  name: "do_result_likesub_update_clone_likesub_activities"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResultLikesub"
+    queue: "Autofarmer.DoResultLikesub.UpdateCloneLikesubActivities"
+    routing_key: ""
+    prefetch: 100
+# =================REPORT AUTOLIKE CONSUMER===================
+report_autofarmer_daily_token:
+  name: "report_autofarmer_daily_token"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResultLikesub"
+    queue: "Autofarmer.DoResultLikesub.ReportDailyToken"
+    routing_key: ""
+    prefetch: 100
+report_autofarmer_daily_device:
+  name: "report_autofarmer_daily_device"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResultLikesub"
+    queue: "Autofarmer.DoResultLikesub.ReportDailyDevice"
+    routing_key: ""
+    prefetch: 100
+report_autofarmer_daily_pay:
+  name: "report_autofarmer_daily_pay"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResultLikesub"
+    queue: "Autofarmer.DoResultLikesub.ReportDailyPay"
+    routing_key: ""
+    prefetch: 100
+report_autofarmer_daily_fee:
+  name: "report_autofarmer_daily_fee"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResultAutofarmer"
+    queue: "Autofarmer.DoResultAutofarmer.ReportDailyFee"
+    routing_key: ""
+    prefetch: 100
+# ===================Autofarmer Old============
+migrate_binding_clone_device_id:
+  name: "migrate_binding_clone_device_id"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.Migrate.BindingCloneDeviceID"
+    queue: "Autofarmer.Migrate.BindingCloneDeviceID"
+    routing_key: ""
+    prefetch: 100
+migrate_binding_clone_new_DeviceID:
+  name: "migrate_binding_clone_new_device_id"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.Migrate.BindingCloneNewDeviceID"
+    queue: "Autofarmer.Migrate.BindingCloneNewDeviceID"
+    routing_key: ""
+    prefetch: 100
+save_backup_service_log:
+  name: "save_backup_service_log"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResultLikesub"
+    queue: "Autofarmer.DoResultLikesub.BackupServiceLog"
+    routing_key: ""
+    prefetch: 100
+get_do_action_update_clone_get_action_at:
+  name: "get_do_action_update_clone_get_action_at"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.GetDoAction"
+    queue: "Autofarmer.GetDoAction.UpdateCloneGetActionAt"
+    routing_key: ""
+    prefetch: 100
+do_result_update_clone_result_at:
+  name: "do_result_update_clone_result_at"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.DoResult"
+    queue: "Autofarmer.DoResult.UpdateCloneResultAt"
+    routing_key: ""
+    prefetch: 100
+get_do_action_upsert_action_clone:
+  name: "get_do_action_upsert_action_clone"
+  host: "144.202.127.186"
+  port: 5672
+  vhost: "/"
+  user: "admin"
+  pass: "39BTHxA5mMj5cd6"
+  consumer:
+    exchange: "Autofarmer.GetDoAction"
+    queue: "Autofarmer.GetDoAction.UpsertActionClone"
+    routing_key: ""
+    prefetch: 100

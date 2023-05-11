@@ -1,0 +1,69 @@
+package friend
+
+import (
+	"app/model"
+	"context"
+
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo/options"
+)
+
+// All : Lấy danh sách friend
+func (r Repo) All(req model.AllFriendReq) (results []model.FriendInfo, err error) {
+
+	ctx := context.Background()
+	collection := r.Session.GetCollection(r.Collection)
+
+	// set option
+	option := options.Find()
+	option.SetSort(bson.M{"_id": -1})
+
+	if req.Limit != -1 {
+		if req.Limit > 0 && req.Limit <= 100 {
+			option.SetLimit(int64(req.Limit))
+		} else {
+			option.SetLimit(100)
+		}
+	}
+
+	// set filter
+	filter := bson.M{}
+	if !req.Offset.IsZero() {
+		filter["_id"] = bson.M{"$lt": req.Offset}
+	}
+
+	if req.Token != "" {
+		filter["token"] = req.Token
+	}
+
+	if len(req.Status) > 0 {
+		filter["status"] = bson.M{"$in": req.Status}
+	}
+
+	// text search
+	if req.Name != "" {
+		filter["$text"] = bson.M{"$search": req.Name}
+	}
+
+	cur, err := collection.Find(ctx, filter, option)
+	if err != nil {
+		return
+	}
+
+	// Close the cursor once finished
+	defer cur.Close(ctx)
+
+	for cur.Next(ctx) {
+
+		// create a value into which the single document can be decoded
+		temp := model.FriendInfo{}
+		err := cur.Decode(&temp)
+		if err != nil {
+			return nil, err
+		}
+
+		results = append(results, temp)
+	}
+
+	return
+}

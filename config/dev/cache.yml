@@ -1,0 +1,9 @@
+"core":
+  name: "core"
+  address:
+    - "65.108.10.104:27027"
+  user: "admin"
+  pass: "9gkvvbrw2EFNLhey"
+  dbname: "autofarmer"
+  timeout: 600
+  pool_limit: 100

@@ -1,0 +1,9 @@
+"core":
+  name: "core"
+  connection-type: "tcp"
+  address: "144.202.127.186:6379"
+  password: "ggw6D6Wy6mfgG2G"
+  dbnum: 0
+  retry: 3
+  timeout: 10
+  pool-limit: 10

@@ -1,0 +1,10 @@
+name: autofamer dev
+port:
+  "app": 10090
+  "api_autofarmer_net": 10091
+  "admin_api_autofarmer_net": 10092
+  "api8_autofarmer_net": 10093
+  "approval_api_autofarmer_net": 10094
+  "internal_api_autofarmer_net": 10095
+version: "0.0.1"
+debug: true

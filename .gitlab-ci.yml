@@ -1,0 +1,14 @@
+stages:
+  - api-f.like24h.cc
+
+api-f.like24h.cc:
+    stage: api-f.like24h.cc
+    before_script:
+        - mkdir -p ~/.ssh
+        - echo -e "$SSH" > ~/.ssh/id_rsa
+        - chmod 600 ~/.ssh/id_rsa
+    script:
+        - ssh -o StrictHostKeyChecking=no root@202.182.120.163 "cd /home/api-f.like24h.cc/ && mv config/dev/base.yml /tmp/base.yml && git stash && git pull && rm -f config/dev/base.yml && mv /tmp/base.yml config/dev/base.yml && /usr/local/go/bin/go mod tidy && /usr/local/go/bin/go build && systemctl restart api-f.like24h.cc && sleep 5 && systemctl status api-f.like24h.cc"
+    only: 
+        - main
+    #when: manual

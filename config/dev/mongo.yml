@@ -1,0 +1,20 @@
+"core":
+  name: "core"
+  address:
+    - "202.182.120.163:27017"
+  repset_name: "rs0"
+  user: "admin"
+  pass: "RArWmfWU6ip8m5G"
+  dbname: "autofarmer"
+  timeout: 600
+  pool_limit: 100
+"autolike":
+  name: "autolike"
+  address:
+    - "202.182.120.163:27017"
+  repset_name: "rs0"
+  user: "admin"
+  pass: "RArWmfWU6ip8m5G"
+  dbname: "autolike"
+  timeout: 600
+  pool_limit: 100

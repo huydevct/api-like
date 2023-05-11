@@ -1,0 +1,50 @@
+esms_send_otp:
+  url: http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/
+  method: POST
+  timeout: 3
+  header:
+    - key: Content-Type
+      value: application/json
+autolike_detail_service_by_code:
+  url: https://adminapi-autolike.congaubeo.us/api/v1/services/get-detail-by-code
+  method: GET
+  cache: 10
+  timeout: 3
+  auth:
+    username: congaubeo@123
+    password: congaubeo@123
+autolike_detail_update_viplike_data:
+  url: https://adminapi-autolike.congaubeo.us/api/v1/services/update-viplike-data
+  method: POST
+  timeout: 3
+  header:
+    - key: Content-Type
+      value: application/json
+  auth:
+    username: congaubeo@123
+    password: congaubeo@123
+autolike_random_comment_content:
+  url: https://adminapi-autolike.congaubeo.us/api/v1/comments/random
+  method: GET
+  timeout: 3
+  auth:
+    username: congaubeo@123
+    password: congaubeo@123
+autocomment_random_comment_content:
+  url: https://auto-comment-api.autofarmer.net/status/getStatus
+  method: GET
+  timeout: 3
+autofarmer_get_random_hotmail:
+  url: https://api-mail.congaubeo.me/api/hot-mail/get-random
+  method: POST
+  header:
+    - key: Content-Type
+      value: application/json
+api4_autofarmer_clone:
+  url: https://api4.autofarmer.xyz/api4s/clone
+  method: POST
+  cache: 10
+  timeout: 30
+  header:
+    - key: Content-Type
+      value: application/json
